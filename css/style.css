@@ -1,0 +1,704 @@
+/********** Template CSS **********/
+:root {
+    --primary: #f9a70f;
+    --secondary: #f9a70f;
+    --light: #f9a70f;
+    --dark: #f9a70f;
+}
+
+
+    .cadre-image {
+        max-width: 100%; /* Assurez-vous que l'image ne dépasse pas la largeur du conteneur parent */
+        height: auto; /* Permet à l'image de conserver son ratio hauteur/largeur */
+        object-fit: cover; /* Ajuste la taille de l'image pour remplir complètement le conteneur */
+        border: 2px solid #000; /* Ajoute une bordure à l'image */
+        border-radius: 10px; /* Ajoute des coins arrondis à l'image */
+    }
+
+
+.ccc{
+    background: #f9a70f;
+}
+.cc{
+    color: black;
+}
+.qs{
+    font-size: 24px; 
+}
+.cv{
+    background-color: #181716;
+}
+/*** Spinner ***/
+.spinner {
+    width: 40px;
+    height: 40px;
+    background: var(--primary);
+    margin: 100px auto;
+    -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+    animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+.ds{
+    color: #DDDDDD;
+}
+@-webkit-keyframes sk-rotateplane {
+    0% {
+        -webkit-transform: perspective(120px)
+    }
+    50% {
+        -webkit-transform: perspective(120px) rotateY(180deg)
+    }
+    100% {
+        -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg)
+    }
+}
+
+@keyframes sk-rotateplane {
+    0% {
+        transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+        -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+    }
+    50% {
+        transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+        -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+    }
+    100% {
+        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+        -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    }
+}
+
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+.aa{
+    color: #d05d34;
+}
+.s{
+    color: black;
+    font-size: 1.2em;
+}
+.sd{
+    color: #f9a70f;
+}
+/*** Heading ***/
+h1,
+h2,
+.fw-bold {
+    font-weight: 800 !important;
+    color: black;
+}
+
+h3,
+h4,
+.fw-semi-bold {
+    font-weight: 700 !important;
+    color: black;
+}
+
+
+h5,
+h6,
+.fw-medium {
+    font-weight: 600 !important;
+    color: black;
+}
+
+
+/*** Button ***/
+.btn {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    transition: .5s;
+    background: #f9a70f;
+}
+
+.btn-primary,
+.btn-secondary {
+    color: #FFFFFF;
+    box-shadow: inset 0 0 0 50px transparent;
+}
+
+.btn-primary:hover {
+    box-shadow: inset 0 0 0 0 var(--primary);
+    background: #DDDDDD;
+}
+
+.btn-secondary:hover {
+    box-shadow: inset 0 0 0 0 var(--secondary);
+    background:  #f9a70f;
+}
+
+.btn-square {
+    width: 36px;
+    height: 36px;
+    background:  #f9a70f;
+}
+
+.btn-sm-square {
+    width: 30px;
+    height: 30px;
+    background:  #f9a70f;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+    
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+}
+p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.text-right p {
+    color: black;
+}
+
+
+/*** Navbar ***/
+.navbar-dark .navbar-nav .nav-link {
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    margin-left: 25px;
+    padding: 35px 0;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 600;
+    outline: none;
+    transition: .5s;
+}
+
+.sticky-top.navbar-dark .navbar-nav .nav-link {
+    padding: 20px 0;
+    color: var(--dark);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+.navbar-dark .navbar-brand h1 {
+    color: #FFFFFF;
+}
+
+.navbar-dark .navbar-toggler {
+    color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
+@media (max-width: 991.98px) {
+    .sticky-top.navbar-dark {
+        position: relative;
+        background: #0b0b0b;
+    }
+
+    .navbar-dark .navbar-nav .nav-link,
+    .navbar-dark .navbar-nav .nav-link.show,
+    .sticky-top.navbar-dark .navbar-nav .nav-link {
+        padding: 10px 0;
+        color: var(--dark);
+    }
+
+    .navbar-dark .navbar-brand h1 {
+        color: var(--primary);
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-dark {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        border-bottom: 1px solid rgba(256, 256, 256, .1);
+        z-index: 999;
+    }
+    
+    .sticky-top.navbar-dark {
+        position: fixed;
+        background: #FFFFFF;
+    }
+
+    .navbar-dark .navbar-nav .nav-link::before {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 2px;
+        bottom: -1px;
+        left: 50%;
+        background: var(--primary);
+        transition: .5s;
+    }
+
+    .navbar-dark .navbar-nav .nav-link:hover::before,
+    .navbar-dark .navbar-nav .nav-link.active::before {
+        width: 100%;
+        left: 0;
+    }
+
+    .navbar-dark .navbar-nav .nav-link.nav-contact::before {
+        display: none;
+    }
+
+    .sticky-top.navbar-dark .navbar-brand h1 {
+        color: var(--primary);
+    }
+}
+
+
+/*** Carousel ***/
+.carousel-caption {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(1, 22, 54, 0.7);
+    z-index: 1;
+}
+
+@media (max-width: 576px) {
+    .carousel-caption h5 {
+        font-size: 14px;
+        font-weight: 500 !important;
+    }
+
+    .carousel-caption h1 {
+        font-size: 30px;
+        font-weight: 600 !important;
+    }
+}
+.bg-noir {
+    background-color: #000; /* Noir en code hexadécimal */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 10%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 3rem;
+    height: 3rem;
+}
+
+
+/*** Section Title ***/
+.section-title::before {
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 5px;
+    left: 0;
+    bottom: 0;
+    background: var(--primary);
+    border-radius: 2px;
+}
+
+.section-title.text-center::before {
+    left: 50%;
+    margin-left: -75px;
+}
+
+.section-title.section-title-sm::before {
+    width: 90px;
+    height: 3px;
+}
+
+.section-title::after {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 5px;
+    bottom: 0px;
+    background: #FFFFFF;
+    -webkit-animation: section-title-run 5s infinite linear;
+    animation: section-title-run 5s infinite linear;
+}
+
+.section-title.section-title-sm::after {
+    width: 4px;
+    height: 3px;
+}
+
+.section-title.text-center::after {
+    -webkit-animation: section-title-run-center 5s infinite linear;
+    animation: section-title-run-center 5s infinite linear;
+}
+
+.section-title.section-title-sm::after {
+    -webkit-animation: section-title-run-sm 5s infinite linear;
+    animation: section-title-run-sm 5s infinite linear;
+}
+
+@-webkit-keyframes section-title-run {
+    0% {left: 0; } 50% { left : 145px; } 100% { left: 0; }
+}
+
+@-webkit-keyframes section-title-run-center {
+    0% { left: 50%; margin-left: -75px; } 50% { left : 50%; margin-left: 45px; } 100% { left: 50%; margin-left: -75px; }
+}
+
+@-webkit-keyframes section-title-run-sm {
+    0% {left: 0; } 50% { left : 85px; } 100% { left: 0; }
+}
+
+
+/*** Service ***/
+.service-item {
+    position: relative;
+    height: 300px;
+    padding: 0 30px;
+    transition: .5s;
+}
+
+.service-item .service-icon {
+    margin-bottom: 0px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+    border-radius: 2px;
+    transform: rotate(deg);
+}
+
+.service-item .service-icon i {
+    transform: rotate(deg);
+}
+
+.service-item a.btn {
+    position: absolute;
+    width: 60px;
+    bottom: -48px;
+    left: 50%;
+    margin-left: -30px;
+    opacity: 0;
+}
+
+.service-item:hover a.btn {
+    bottom: -24px;
+    opacity: 1;
+}
+
+
+/*** Testimonial ***/
+.testimonial-carousel .owl-dots {
+    margin-top: 15px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.testimonial-carousel .owl-dot {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    width: 15px;
+    height: 15px;
+    background: #DDDDDD;
+    border-radius: 2px;
+    transition: .5s;
+}
+.testimonial-carousel .owl-dot.active {
+    width: 30px;
+    background: var(--primary);
+}
+.testimonial-carousel .owl-item.center {
+    position: relative;
+    z-index: 1;
+}
+.testimonial-carousel .owl-item .testimonial-item {
+    transition: .5s;
+}
+.testimonial-carousel .owl-item.center .testimonial-item {
+    background: #FFFFFF !important;
+    box-shadow: 0 0 30px #DDDDDD;
+}
+
+
+/*** Team ***/
+.team-item {
+    transition: .5s;
+}
+
+.team-social {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+}
+
+.team-social a.btn {
+    position: relative;
+    margin: 0 3px;
+    margin-top: 100px;
+    opacity: 0;
+}
+
+.team-item:hover {
+    box-shadow: 0 0 30px #DDDDDD;
+}
+
+
+.team-item:hover .team-social a.btn:first-child {
+    opacity: 1;
+    margin-top: 0;
+    transition: .3s 0s;
+}
+
+
+.text-right p {
+    color: black;
+}
+
+
+
+.blog-item .blog-img img  {
+    transition: .5s;
+}
+
+ 
+.blog-item:hover .blog-img img {
+    transform: scale(1.15);
+}
+
+
+
+
+/*** Miscellaneous ***/
+@media (min-width: 991.98px) {
+    .facts {
+        position: relative;
+        margin-top: -75px;
+        z-index: 1;
+    }
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+.bg-header {
+    background: linear-gradient(rgba(8, 30, 62, 0.7), rgba(9, 30, 62, .7)), url(../img/acueil1.jpg) center center no-repeat;
+    background-size: cover;
+}
+.bg {
+    background: linear-gradient(rgba(8, 30, 62, 0.7), rgba(9, 30, 62, .7)), url(../img/acueil1.jpg) center center no-repeat;
+    background-size: cover;
+}
+.img {
+    width: 100px; /* ou toute autre valeur que vous préférez */
+}
+
+.link-animated a {
+    transition: .5s;
+}
+
+.link-animated a:hover {
+    padding-left: 10px;
+}
+
+
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+    display: none;
+}
+
+.eye-icon {
+    font-size: 30px;
+    color: #fff;
+}
+
+.col-lg-4:hover .overlay {
+    display: flex;
+    cursor: pointer;
+}
+
+/* Assurez-vous d'avoir la bibliothèque Font Awesome liée à votre projet pour l'icône de l'œil */
+
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    color: #fff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.blog-item {
+    font-size: 18px; /* Augmente la taille de la police */
+    margin-bottom: 30px; /* Ajoute un espace entre les éléments */
+}
+
+.custom-video {
+    height: 300px; /* Ajustez la hauteur selon vos besoins */
+}
+
+
+.p{
+    color: #000;
+}
+
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.5);
+    z-index: 2; /* Assurez-vous que l'overlay est au-dessus des images */
+}
+
+.overlay img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.overlay .close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+.custom-video {
+    border: 5px solid #f9a70f;
+    border-radius: 10px; /* pour des coins arrondis */
+}
+.blog-img a img {
+    border: 5px solid #f9a70f;
+    border-radius: 10px; /* pour des coins arrondis */
+}
+.cadre-image {
+    border: 2px solid #f9a70f;
+    border-radius: 10px; /* Vous pouvez ajuster le rayon selon votre préférence */
+    padding: 10px; /* Optionnel : Pour un espace entre l'image et la bordure */
+}
+
+ .custom-border {
+            border: 4px solid transparent; /* Bordure transparente */
+            border-image: linear-gradient(45deg, #007bff,  #f9a70f); /* Dégradé de couleur */
+            border-image-slice: 1; /* Divise la bordure en 9 parties */
+            border-radius: 10px; /* Arrondi des coins */
+            padding: 10px; /* Espace intérieur */
+            
+        }
+
+  
+
+.link-style {
+    display: block; /* Mettre les liens sur des lignes distinctes */
+    margin-bottom: 5px; /* Ajouter un peu d'espacement entre les liens */
+    text-decoration: none; /* Supprimer le soulignement du lien */
+    color: #f9a70f; /* Couleur du texte du lien */
+    text-align: center; /* Centrer le texte */
+}
+
+.link-style:hover {
+    color: #0056b3; /* Couleur du texte du lien au survol */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+img{
+	max-width: 100%;
+}
+.gallery{
+	background-color: #dbddf1;
+	padding: 80px 0;
+}
+.gallery img{
+	background-color: #f9a70f;
+	padding: 10px;
+	width: 100%;
+	box-shadow: 0 0 15px rgba(0,0,0,0.3);
+	cursor: pointer;
+}
+#gallery-modal .modal-img{
+	width: 100%;
+}
+
+
+
+
+
+
+.img-cadree {
+    max-width: 100%;
+    height: auto;
+    margin: 10px; /* Ajoute de l'espace autour de l'image */
+}
+
+
+
+
